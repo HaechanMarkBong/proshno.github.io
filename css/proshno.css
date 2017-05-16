@@ -2,14 +2,6 @@ body {
     font-size: 100%;
 }
 
-.Responsive {
-   float: left;
-   margin: 10px;
-   padding: 10px;
-   max-width: 300px;
-   height: 300px;
-}  
-
 .fullscreen-bg {
   position: fixed;
   top: 0;
@@ -42,14 +34,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
-  .fullscreen-bg {
-    background: url('../img/videoframe.jpg') center center / cover no-repeat;
-  }
-  .fullscreen-bg__video {
-    display: none;
-  }
-}
+
 
 h1 {
     font-size: 100px;
