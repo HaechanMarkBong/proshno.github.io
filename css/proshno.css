@@ -1,0 +1,155 @@
+body {
+    font-size: 100%;
+}
+
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('../img/videoframe.jpg') center center / cover no-repeat;
+  }
+  .fullscreen-bg__video {
+    display: none;
+  }
+}
+
+h1 {
+    font-size: 100px;
+	margin: 70px;
+	text-align: center;
+}
+
+p {
+    font-size: 25px;
+	margin: 20px;
+	text-align: center;
+	}
+
+.fst {
+	margin-top: 5%;
+}
+
+.web-cam1 { 
+  width: 20%;
+  height: 20%;
+  border-radius: 100%;
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 50%, black 50%);
+}
+
+.web-cam2 { 
+  width: 20%;
+  height: 15%;
+  border-radius: 100%;
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 50%, black 50%);
+}
+
+/* slide bar */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #B22222;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFFFFF;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: 	#F5DEB3;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+	margin-top: 12%;
+	color: #FFFFFF;
+	font-family: Papyrus,fantasy;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Bar color change */
+.sidenav {
+    background-color: red;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: orange;}
+    50%  {background-color: yellow;}
+    75% {background-color: green;}
+	100%  {background-color: brown;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: orange;}
+    50%  {background-color: yellow;}
+    75% {background-color: green;}
+	100%  {background-color: brown;}
+}
