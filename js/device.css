@@ -2,24 +2,6 @@ body {
     font-size: 100%;
 }
 
-.Responsive {
-   float: left;
-   margin: 10px;
-   padding: 10px;
-   max-width: 300px;
-   height: 300px;
-}  
-
-.fullscreen-bg {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -100;
-}
-
 .fullscreen-bg__video {
   position: absolute;
   top: 0;
@@ -44,7 +26,7 @@ body {
 
 @media (max-width: 767px) {
   .fullscreen-bg {
-    background: url('../img/videoframe.jpg') center center / cover no-repeat;
+    background: url('../img/bg.png') center center / cover no-repeat;
   }
   .fullscreen-bg__video {
     display: none;
@@ -53,19 +35,28 @@ body {
 
 h1 {
     font-size: 100px;
-	margin: 70px;
+	
 	text-align: center;
 }
 
 p {
     font-size: 25px;
-	margin: 20px;
+	margin-left: 25%;
+	margin-top: 5%;
 	text-align: center;
 	}
 
 .fst {
 	margin-top: 5%;
 }
+
+.Responsive{
+   float: left;
+   margin: 10px;
+   padding: 10px;
+   max-width: 300px;
+   height: 300px;
+}  
 
 .web-cam1 { 
   width: 20%;
@@ -120,7 +111,7 @@ p {
     transition: margin-left .5s;
     padding: 16px;
 	margin-top: 12%;
-	color: #FFFFFF;
+	color: red;
 	font-family: Papyrus,fantasy;
 	font-style: normal;
 	font-variant: normal;
@@ -159,4 +150,14 @@ p {
     50%  {background-color: yellow;}
     75% {background-color: green;}
 	100%  {background-color: brown;}
+}
+
+@media screen and (max-width: 768px){
+  video{
+    display:none;
+  }
+    .full-img{
+    background: url('../img/bg.png');
+    background-size: cover;
+  }
 }

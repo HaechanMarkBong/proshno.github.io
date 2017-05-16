@@ -4,60 +4,64 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<!-- demo -->
 <link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="css/proshno.css" rel="stylesheet">
-
+<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="device.css"/>
 <!-- jQuery (required) -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	<div class="fullscreen-bg">
-		<video playsinline autoplay muted loop poster="img/bg.png" class="fullscreen-bg__video">
-			<source src="img/proshno.mp4" type="video/mp4">
-		</video>
+	<div class="Responsive">
+		<div class="fullscreen-bg">
+			<video playsinline autoplay muted loop poster="img/bg.png" class="fullscreen-bg__video">
+				<source src="img/proshno.mp4" type="video/mp4">
+				<img src="img/bg.png">Visit the website with a Desktop to see a video.
+			</video>
+		</div>
+		
+		<div id="main">
+			<h1>Proshno</h1>
+			<a href="https://www.facebook.com/Proshno-826888390701928/?ref=ts&fref=ts">
+				<i class="fa fa-facebook" aria-hidden="true" style="font-size: 30px; color: #FFFFFF; margin-left: 35%; top: 105%;">f</i>
+			</a>
+			<span style="font-size: 30px; margin-left: 13%; cursor: pointer" onclick="openNav()">&#9776;</span>
+			<a href="#" onclick="mute()">
+				<span id="icon" style="font-size: 30px; color: #FFFFFF; left: 13%; top: 105%;" class="glyphicon glyphicon-volume-up"></span>
+			</a>
+			<p class="fst">Do you need medical or legal help?</p>
+			<p>Are you not sure if you should talk with medical or legal professional?</p>
+			<p>You can get medical or legal advices without worrying about money.</p>
+		</div>
 	</div>
 	
-	<div id="main">
-		<h1>Proshno</h1>
-		<a href="https://www.facebook.com/Proshno-826888390701928/?ref=ts&fref=ts">
-			<i class="fa fa-facebook" aria-hidden="true" style="font-size: 30px; color: #FFFFFF; margin-left: 35%; top: 105%;">f</i>
-		</a>
-		<span style="font-size: 30px; margin-left: 13%; cursor: pointer" onclick="openNav()">&#9776;</span>
-		<a href="#" onclick="mute()">
-			<span id="icon" style="font-size: 30px; color: #FFFFFF; left: 13%; top: 105%;" class="glyphicon glyphicon-volume-up"></span>
-		</a>
-		<p class="fst">Do you need medical or legal help?</p>
-		<p>Are you not sure if you should talk with medical or legal professional?</p>
-		<p>You can get medical or legal advices without worrying about money.</p>
-	</div>
-
-	<div id="mySidenav" class="sidenav">
-	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	  <a href="#">
-		<a data-toggle="collapse" href="#collapse1">Ask a Question</a>
-			<div id="collapse1" class="panel-collapse collapse">
-				<ul class="list-group">
-					<a href="#">
-						<video playsinline autoplay muted loop poster="img/bg.png" class="web-cam2">
-							<source src="img/medical.mp4" type="video/mp4">
-						</video>
-						Medical Advice</a>
-						
-					<a href="#">
-						<video playsinline autoplay muted loop poster="img/bg.png" class="web-cam1">
-							<source src="img/legal.mp4" type="video/mp4">
-						</video>
-						Legal Advice
-					</a>
-				</ul>
-			</div>
-		</a>
-		<a href="#" style="margin-top: 60%">About</a>
-		<a href="#">Contact</a>
+	<div class="Responsive">
+		<div id="mySidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  <a href="#">
+			<a data-toggle="collapse" href="#collapse1">Ask a Question</a>
+				<div id="collapse1" class="panel-collapse collapse">
+					<ul class="list-group">
+						<a href="#">
+							<video playsinline autoplay muted loop poster="img/bg.png" class="web-cam2">
+								<source src="img/medical.mp4" type="video/mp4">
+							</video>
+							Medical Advice</a>
+							
+						<a href="#">
+							<video playsinline autoplay muted loop poster="img/bg.png" class="web-cam1">
+								<source src="img/legal.mp4" type="video/mp4">
+							</video>
+							Legal Advice
+						</a>
+					</ul>
+				</div>
+			</a>
+			<a href="#" style="margin-top: 60%">About</a>
+			<a href="#">Contact</a>
+		</div>
 	</div>
 	
 	<audio id="bgsong" autoplay loop>
